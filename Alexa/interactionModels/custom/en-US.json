@@ -1,0 +1,181 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pizza boy",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "DriveIntent",
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "direction",
+              "type": "Direction"
+            },
+            {
+              "name": "unit",
+              "type": "unit"
+            }
+          ],
+          "samples": [
+            " Drive {distance} {unit} {direction}  ",
+            "to Drive {distance} {unit} {direction}  ",
+            "to Drive {direction} {distance} {unit}",
+            "Drive {direction} {distance} {unit}"
+          ]
+        },
+        {
+          "name": "RotateIntent",
+          "slots": [
+            {
+              "name": "Degree",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Direction",
+              "type": "Direction"
+            }
+          ],
+          "samples": [
+            "rotate {Degree} Degrees {Direction}"
+          ]
+        },
+        {
+          "name": "GoalIntent",
+          "slots": [
+            {
+              "name": "Dest",
+              "type": "Destinations"
+            }
+          ],
+          "samples": [
+            "return to {Dest}",
+            "go to {Dest}",
+            "deliver this drive to  {Dest} please"
+          ]
+        },
+        {
+          "name": "GoodboyeIntent",
+          "slots": [
+            {
+              "name": "we",
+              "type": "AMAZON.Animal"
+            }
+          ],
+          "samples": [
+            "he is the best boy",
+            "he is a good Boy"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "to the left"
+              }
+            },
+            {
+              "name": {
+                "value": "to the right"
+              }
+            },
+            {
+              "name": {
+                "value": "Backward"
+              }
+            },
+            {
+              "name": {
+                "value": "Forward"
+              }
+            }
+          ],
+          "name": "Direction"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "centimeters"
+              }
+            },
+            {
+              "name": {
+                "value": "meters"
+              }
+            }
+          ],
+          "name": "unit"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Robin"
+              }
+            },
+            {
+              "name": {
+                "value": "Lennart"
+              }
+            },
+            {
+              "name": {
+                "value": "Kitchen"
+              }
+            },
+            {
+              "name": {
+                "value": "Till"
+              }
+            }
+          ],
+          "name": "Destinations"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "20"
+}
